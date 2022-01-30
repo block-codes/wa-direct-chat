@@ -1,0 +1,27 @@
+{
+  "name": "wa-direct-chat",
+  "version": "1.0.0",
+  "description": "Paste the recipient's number and get direct link to send message without storing the number.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/block-codes/wa-direct-chat.git"
+  },
+  "keywords": [
+    "whatsapp",
+    "direct",
+    "chat"
+  ],
+  "author": "vishaakm",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/block-codes/wa-direct-chat/issues"
+  },
+  "homepage": "https://github.com/block-codes/wa-direct-chat#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.18"
+  }
+}

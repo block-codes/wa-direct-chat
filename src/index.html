@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WA Direct Chat Link</title>
+    <meta name="description"
+        content="Paste the recipient's number and get direct link to send message without storing the number.">
+
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <form name="waForm" class="w-screen h-screen bg-gray-700 flex flex-col gap-5 justify-center items-center"
+        onsubmit="openChat(event)">
+
+        <div class="flex">
+            <div class="flex">
+                <label for="countryCode" class="text-xl text-white px-1 font-semibold">+</label>
+                <input class="w-10 rounded pl-1 font-semibold ring ring-green-600" id="countryCode" name="countryCode" type="number"
+                    placeholder="IN" value="91" required>
+            </div>
+            <div class="flex">
+                <label for="contact" class="text-xl text-white px-1 font-semibold">-</label>
+                <input class="w-64 rounded px-1 font-semibold ring ring-green-600" id="contact" name="contact" type="tel"
+                    placeholder="Contact number" minlength="10" maxlength="10" required>
+            </div>
+        </div>
+
+        <div class="flex">
+            <button class="px-2 py-1 rounded bg-green-600 text-white font-semibold hover:ring hover:ring-white" type="submit">Open Chat</button>
+        </div>
+
+    </form>
+
+
+    <script>
+
+        function openChat(event) {
+
+            event.preventDefault();
+
+            let countryCode = document.forms['waForm']['countryCode'].value;
+            let contact = document.forms['waForm']['contact'].value;
+
+
+            console.log(contact);
+
+            if (countryCode && contact) {
+                let URL = `https://wa.me/${countryCode}${contact}`;
+
+                window.open(URL, '_blank');
+            }
+
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
